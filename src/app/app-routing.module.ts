@@ -8,8 +8,20 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'provincias',
     pathMatch: 'full'
+  },
+  {
+    path: 'provincias',
+    loadChildren: () => import('./provincias/provincias.module').then( m => m.ProvinciasPageModule)
+  },
+  {
+    path: 'municipios',
+    loadChildren: () => import('./municipios/municipios.module').then( m => m.MunicipiosPageModule)
+  },
+  {
+    path: 'tiempo',
+    loadChildren: () => import('./tiempo/tiempo.module').then( m => m.TiempoPageModule)
   },
 ];
 

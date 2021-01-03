@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tiempo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let temporal of meteo; let indice=index;">
+    <ion-item>
+      <ion-label class="ion-text-wrap">{{temporal}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
